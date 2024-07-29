@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         // fontFamily: Font.txt_normal,
         marginHorizontal: 5,
+        color:'black'
     },
     eye: {
         height: 18,

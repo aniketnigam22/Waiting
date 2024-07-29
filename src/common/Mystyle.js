@@ -2,10 +2,10 @@ import { StyleSheet } from "react-native";
 
 export const Mystyle = StyleSheet.create({
     placeHolder_text: {
-        fontSize: 14,
-        fontWeight: "500",
-        color: 'grey',
-        paddingVertical: 2,
+        fontSize: 16,
+        fontWeight: "600",
+        color: 'black',
+        paddingVertical: 10,
     },
     select_box: {
         height: 50,
