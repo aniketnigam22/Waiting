@@ -3,49 +3,33 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearValue, increment } from '../../redux/CounterReducer/CounterReducer'
 import { PaperProvider, TextInput } from 'react-native-paper'
-import Icon from 'react-native-vector-icons/MaterialIcons'; // or any other icon set
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import TextBox from '../../components/TextBox'
 
 const Login = () => {
 
-    const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
-    const [password, setPassword] = useState('');
-    const [secureTextEntry, setSecureTextEntry] = useState(true);
+    const [password, setPassword] = useState()
+    const [eyeValue, setEyeValue] = useState()
+
+    const toggleEye = () => {
+        setEyeValue(prevValue => !prevValue);
+    };
+
+
+    console.log((eyeValue));
     return (
-
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={{ color: 'black', fontSize: 20 }}>{count}</Text>
-            <Button title='increase' onPress={() => dispatch(increment())}></Button>
-            <Button title='clear' onPress={() => dispatch(clearValue())}></Button>
-            <TextInput
-                label="Password"
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry={secureTextEntry}
-                right={
-                    <>
-                        <TouchableHighlight>
-                            <Icon
-                                name={secureTextEntry ? "visibility" : "visibility-off"}
-                                size={24}
-                                color="gray"
-                            />
-                        </TouchableHighlight>
-                    </>
-                }
-                style={styles.input}
-            />
-
-            <TextInput
-                label="Password"
-                secureTextEntry
-                style={styles.input}
-                right={<TextInput.Icon icon="eye-open" />}
-            />
-            <Icon
-                name={secureTextEntry ? "visibility" : "visibility-off"}
-                size={24}
-                color="gray"
+        <View>
+            <TextBox
+                secure={true}
+                placeholder={'Password'}
+                onChangeText={(e) => {
+                    setPassword(e)
+                    console.log('on change text pressed')
+                }}
+                secureTextEntry={!eyeValue}
+                placeholder_txt={'Password'}
+                eye={eyeValue}
+                onPress={toggleEye}
             />
         </View>
 
