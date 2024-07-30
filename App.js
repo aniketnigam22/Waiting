@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/screens/LoginScreen/Login';
 import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
+import SignUp from './src/screens/SignUpScreen/SignUp';
+import ChooseUserType from './src/screens/ChooseUserType/ChooseUserType';
 
 const App = () => {
 
@@ -12,8 +14,10 @@ const App = () => {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
+          <Stack.Screen name="ChooseUserType" component={ChooseUserType} />
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="SignUp" component={SignUp} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
