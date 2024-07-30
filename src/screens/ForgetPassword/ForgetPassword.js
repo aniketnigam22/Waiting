@@ -11,21 +11,25 @@ import Colors from '../../common/Colors'
 import LongButton from '../../components/LongButton'
 import HeaderBackButton from '../../components/HeaderBackButton'
 
-const Login = ({ navigation }) => {
+const ForgetPassword = ({navigation}) => {
 
     const [password, setPassword] = useState()
     const [email, setEmail] = useState()
+    const [confPassword, setConfPassword] = useState()
     const [eyeValue, setEyeValue] = useState()
+    const [eyeValue2, setEyeValue2] = useState()
 
     const toggleEye = () => {
         setEyeValue(prevValue => !prevValue);
     };
-
+    const toggleEye2 = () => {
+        setEyeValue2(prevValue => !prevValue);
+    };
     return (
 
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
             <ScrollView>
-                <HeaderBackButton textValue={'Login'} goBack={false} />
+                <HeaderBackButton textValue={'Forget Password'} goBack={false} />
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Image source={AppImages.loginImage} resizeMode='contain' style={{ height: responsiveHeight(350), width: responsiveWidth(350) }} />
                 </View>
@@ -49,16 +53,28 @@ const Login = ({ navigation }) => {
                         eye={eyeValue}
                         onPress={toggleEye}
                     />
-                    <View style={styles.forgetPcontainer}>
-                        <Text style={styles.forgetPtext} onPress={() => navigation.navigate('ForgetPassword')}>{`Forget Passwords ?`}</Text>
-                    </View>
 
-                    <LongButton
-                        buttonText={'Login'}
-                        onPress={() => {
-                            console.log('buttonClicked')
+                    <TextBox
+                        secure={true}
+                        placeholder={'Confirm Password'}
+                        onChangeText={(e) => {
+                            setConfPassword(e)
                         }}
+                        secureTextEntry={!eyeValue2}
+                        eye={eyeValue2}
+                        placeholder_txt={'Confirm Password'}
+                        onPress={toggleEye2}
                     />
+
+
+                    <View style={{marginTop:10}}>
+                        <LongButton
+                            buttonText={'Login'}
+                            onPress={() => {
+                                console.log('buttonClicked')
+                            }}
+                        />
+                    </View>
 
                     <View style={styles.AccountSetContainer}>
                         <Text style={{ color: Colors.grey }}>{`Don't have an account ?  `}</Text>
@@ -72,7 +88,8 @@ const Login = ({ navigation }) => {
     )
 }
 
-export default Login
+export default ForgetPassword
+
 
 const styles = StyleSheet.create({
     input: {

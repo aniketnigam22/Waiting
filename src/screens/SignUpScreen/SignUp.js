@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import HeaderBackButton from '../../components/HeaderBackButton'
 import AppImages from '../../common/AppImages'
@@ -7,6 +7,7 @@ import { useSafeAreaFrame } from 'react-native-safe-area-context'
 import TextBox from '../../components/TextBox'
 import LongButton from '../../components/LongButton'
 import Colors from '../../common/Colors'
+
 
 
 const SignUp = ({ navigation }) => {
@@ -28,7 +29,7 @@ const SignUp = ({ navigation }) => {
     const toggleEye2 = () => {
         setEyeValue2(prevValue => !prevValue);
     };
-
+    console.log(number);
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
@@ -40,22 +41,42 @@ const SignUp = ({ navigation }) => {
                 </View>
 
                 <View>
-                    <TextBox
-                        secure={false}
-                        placeholder={'Name'}
-                        onChangeText={(e) => {
-                            setName(e)
-                        }}
-                        placeholder_txt={'Name'}
-                    />
-                    <TextBox
-                        secure={false}
-                        placeholder={'Phone Number'}
-                        onChangeText={(e) => {
-                            setNumber(e)
-                        }}
-                        placeholder_txt={'Phone Number'}
-                    />
+                    <View style={styles.customTextInutContainer}>
+                        <View>
+                            <Text style={styles.customTextInputText}>{`Name`}</Text>
+                            <View style={styles.customTextInputInnerContainer}>
+                                <TextInput
+                                    placeholder='Name'
+                                    placeholderTextColor={'grey'}
+                                    onChangeText={(text) => {
+                                        setName(text)
+                                    }}
+                                    style={{
+                                        paddingHorizontal: 10,
+                                        color: 'black'
+                                    }}
+                                />
+                            </View>
+                        </View>
+                        <View>
+                            <Text style={styles.customTextInputText}>{`Phone Number`}</Text>
+                            <View style={styles.customTextInputInnerContainer}>
+                                <TextInput
+                                    placeholder='Phone Number'
+                                    placeholderTextColor={'grey'}
+                                    onChangeText={(text) => {
+                                        setNumber(text)
+                                    }}
+                                    keyboardType='numeric'
+                                    style={{
+                                        paddingHorizontal: 10,
+                                        color: 'black'
+                                    }}
+                                />
+                            </View>
+                        </View>
+                    </View>
+
                     <TextBox
                         secure={false}
                         placeholder={'Email'}
@@ -121,5 +142,24 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         marginVertical: 10
+    },
+    customTextInutContainer: {
+        marginHorizontal: 16,
+        flexDirection: "row",
+        justifyContent: 'space-between'
+    },
+    customTextInputText: {
+        color: 'black',
+        fontWeight: '600',
+        fontSize: 16,
+        paddingVertical: 10
+    },
+    customTextInputInnerContainer: {
+        borderWidth: 1,
+        borderColor: 'grey',
+        borderRadius: 10,
+        width: responsiveWidth(150),
+        borderColor: "#B8B8D2",
+        height: responsiveHeight(50)
     }
 })

@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from './src/redux/store';
 import SignUp from './src/screens/SignUpScreen/SignUp';
 import ChooseUserType from './src/screens/ChooseUserType/ChooseUserType';
+import ForgetPassword from './src/screens/ForgetPassword/ForgetPassword';
 
 const App = () => {
 
@@ -18,6 +19,8 @@ const App = () => {
           <Stack.Screen name="ChooseUserType" component={ChooseUserType} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

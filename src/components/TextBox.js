@@ -29,7 +29,7 @@ const TextBox = (props) => {
                             <Text style={Mystyle.placeHolder_text}>{props.placeholder}</Text>
                             <View style={[Mystyle.select_box, { flexDirection: "row" }]}>
                                 <View style={Mystyle.header}>
-                                    <TextInput maxLength={props.maxLength} onChangeText={props.onChangeText} placeholder={props.placeholder_txt} style={props.value ? styles.txt : styles.placeholder} placeholderTextColor={'grey'} keyboardType={props.keyboardType} value={props.value} caretHidden={props.caretHidden} selectTextOnFocus={props.selectTextOnFocus} showSoftInputOnFocus={props.showSoftInputOnFocus} />
+                                    <TextInput maxLength={props.maxLength} onChangeText={props.onChangeText} placeholder={props.placeholder_txt} style={styles.txt} placeholderTextColor={'grey'} keyboardType={props.keyboardType} value={props.value} caretHidden={props.caretHidden} selectTextOnFocus={props.selectTextOnFocus} showSoftInputOnFocus={props.showSoftInputOnFocus} />
                                 </View>
                                 <View style={[Mystyle.center, { marginHorizontal: 10 }]}>
                                     {props.icon ? <TouchableOpacity disabled={props.disabled} onPress={props.onVerify}>
