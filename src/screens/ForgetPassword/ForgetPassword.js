@@ -1,9 +1,5 @@
 import { Button, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { clearValue, increment } from '../../redux/CounterReducer/CounterReducer'
-import { PaperProvider, TextInput } from 'react-native-paper'
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import TextBox from '../../components/TextBox'
 import AppImages from '../../common/AppImages'
 import { responsiveHeight, responsiveWidth } from '../../common/metrices'
@@ -26,7 +22,6 @@ const ForgetPassword = ({navigation}) => {
         setEyeValue2(prevValue => !prevValue);
     };
     return (
-
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
             <ScrollView>
                 <HeaderBackButton textValue={'Forget Password'} goBack={false} />
@@ -53,7 +48,6 @@ const ForgetPassword = ({navigation}) => {
                         eye={eyeValue}
                         onPress={toggleEye}
                     />
-
                     <TextBox
                         secure={true}
                         placeholder={'Confirm Password'}

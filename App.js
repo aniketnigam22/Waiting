@@ -8,6 +8,8 @@ import { store } from './src/redux/store';
 import SignUp from './src/screens/SignUpScreen/SignUp';
 import ChooseUserType from './src/screens/ChooseUserType/ChooseUserType';
 import ForgetPassword from './src/screens/ForgetPassword/ForgetPassword';
+import ShopDetail1 from './src/screens/ShopDetail/ShopDetail1';
+import ShopDetail2 from './src/screens/ShopDetail/ShopDetail2';
 
 const App = () => {
 
@@ -20,7 +22,8 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
-
+          <Stack.Screen name="ShopDetail1" component={ShopDetail1} />
+          <Stack.Screen name="ShopDetail2" component={ShopDetail2} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

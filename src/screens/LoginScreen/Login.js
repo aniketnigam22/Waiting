@@ -57,6 +57,7 @@ const Login = ({ navigation }) => {
                         buttonText={'Login'}
                         onPress={() => {
                             console.log('buttonClicked')
+                            navigation.navigate('ShopDetail1')
                         }}
                     />
 

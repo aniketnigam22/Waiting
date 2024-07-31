@@ -5,4 +5,8 @@ export default AppImages = {
     singUp: require('../assets/Images/signUp.jpg'),
     backButton: require('../assets/Images/backButton.png'),
     waitImage: require('../assets/Images/wait.jpg'),
+    shopDetail: require('../assets/Images/shopDetailScreen.jpg'),
+    dropdownIcon: require('../assets/Images/dropdownIcon.png'),
+
+
 }

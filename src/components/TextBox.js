@@ -11,7 +11,7 @@ const TextBox = (props) => {
                     {props.secure ?
                         <>
                             <Text style={Mystyle.placeHolder_text}>{props.placeholder}</Text>
-                            <View style={Mystyle.select_box}>
+                            <View style={[Mystyle.select_box, { height: props.height != null ? props.height : 50 }]}>
                                 <View style={Mystyle.row}>
                                     <View style={Mystyle.header}>
                                         <TextInput onChangeText={props.onChangeText} secureTextEntry={props.secureTextEntry} placeholder={props.placeholder_txt} style={styles.txt} placeholderTextColor={'grey'} value={props.value} />
@@ -27,7 +27,7 @@ const TextBox = (props) => {
                         :
                         <>
                             <Text style={Mystyle.placeHolder_text}>{props.placeholder}</Text>
-                            <View style={[Mystyle.select_box, { flexDirection: "row" }]}>
+                            <View style={[Mystyle.select_box, { flexDirection: "row",  height: props.height != null ? props.height : 50 }]}>
                                 <View style={Mystyle.header}>
                                     <TextInput maxLength={props.maxLength} onChangeText={props.onChangeText} placeholder={props.placeholder_txt} style={styles.txt} placeholderTextColor={'grey'} keyboardType={props.keyboardType} value={props.value} caretHidden={props.caretHidden} selectTextOnFocus={props.selectTextOnFocus} showSoftInputOnFocus={props.showSoftInputOnFocus} />
                                 </View>
