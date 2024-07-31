@@ -52,7 +52,7 @@ const SignUp = ({ navigation }) => {
                                         setName(text)
                                     }}
                                     style={{
-                                        paddingHorizontal: 10,
+                                        paddingHorizontal: 8,
                                         color: 'black'
                                     }}
                                 />
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'grey',
         borderRadius: 10,
-        width: responsiveWidth(150),
+        width: responsiveWidth(165),
         borderColor: "#B8B8D2",
         height: responsiveHeight(50)
     }

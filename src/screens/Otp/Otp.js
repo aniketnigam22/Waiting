@@ -8,7 +8,7 @@ import OTPTextView from 'react-native-otp-textinput';
 import LongButton from '../../components/LongButton'
 
 
-const Otp = () => {
+const Otp = ({navigation}) => {
     const [text, setText] = useState('');
     const [otpInput, setOtpInput] = useState('');
     const input = useRef(null);
