@@ -5,12 +5,29 @@ import { responsiveHeight, responsiveWidth } from '../../common/metrices'
 import AppImages from '../../common/AppImages'
 import TextBox from '../../components/TextBox'
 import LongButton from '../../components/LongButton'
+import { useDispatch } from 'react-redux'
+import { addShopDetail } from '../../redux/ShopDetailReducer/ShopDetailReducer'
 
-const ShopDetail1 = ({navigation}) => {
+const ShopDetail1 = ({ navigation }) => {
+
+  const dispatch = useDispatch();
 
   const [shopName, setShopName] = useState()
   const [ownerName, setOwnerName] = useState()
   const [shopAddress, setShopAddress] = useState()
+
+  const handleShopDetailContinue = () => {
+    
+    const data = {
+      shopName: shopName,
+      ownerName: ownerName,
+      shopAddress: shopAddress
+    }
+
+    dispatch(addShopDetail(data));
+
+    navigation.navigate('ShopDetail2')
+  }
 
 
   return (
@@ -27,7 +44,7 @@ const ShopDetail1 = ({navigation}) => {
             secure={false}
             placeholder={'Shop Name'}
             onChangeText={(e) => {
-              setEmail(e)
+              setShopName(e)
             }}
             placeholder_txt={'Shop Name'}
           />
@@ -35,7 +52,7 @@ const ShopDetail1 = ({navigation}) => {
             secure={false}
             placeholder={'Owner Name'}
             onChangeText={(e) => {
-              setEmail(e)
+              setOwnerName(e)
             }}
             placeholder_txt={'Owner Name'}
           />
@@ -43,7 +60,7 @@ const ShopDetail1 = ({navigation}) => {
             secure={false}
             placeholder={'Shop Address'}
             onChangeText={(e) => {
-              setEmail(e)
+              setShopAddress(e)
             }}
             placeholder_txt={'Shop Address'}
           />
@@ -52,8 +69,7 @@ const ShopDetail1 = ({navigation}) => {
             <LongButton
               buttonText={'Continue'}
               onPress={() => {
-                console.log('buttonClicked')
-                navigation.navigate('ShopDetail2')
+                handleShopDetailContinue()
               }}
             />
           </View>

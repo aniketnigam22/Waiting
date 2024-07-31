@@ -8,8 +8,11 @@ import LongButton from '../../components/LongButton'
 import SelectDropdown from 'react-native-select-dropdown'
 import { Icon } from 'react-native-paper'
 import Colors from '../../common/Colors'
+import { useSelector } from 'react-redux';
 
-const ShopDetail2 = () => {
+const ShopDetail2 = ({ navigation }) => {
+  const shopDetails = useSelector((state) => state.shop);
+
   const [shopName, setShopName] = useState()
   const [ownerName, setOwnerName] = useState()
   const [shopAddress, setShopAddress] = useState()
@@ -21,6 +24,8 @@ const ShopDetail2 = () => {
     { title: 'Resturant', icon: 'emoticon-sad-outline' },
     { title: 'Tailer', icon: 'emoticon-cry-outline' },
   ];
+
+  console.log("Shop Detail Screen 2: ", shopDetails)
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
       <ScrollView>
@@ -123,7 +128,7 @@ const ShopDetail2 = () => {
               buttonText={'Submit'}
               onPress={() => {
                 console.log('buttonClicked')
-                navigation.navigate('ShopDetail2')
+                navigation.navigate('ShopDetail1')
               }}
             />
           </View>

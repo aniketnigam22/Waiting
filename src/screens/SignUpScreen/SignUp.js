@@ -121,6 +121,7 @@ const SignUp = ({ navigation }) => {
                             buttonText={'Sign Up'}
                             onPress={() => {
                                 console.log('buttonClicked')
+                                navigation.navigate('Otp')
                             }}
                         />
                     </View>

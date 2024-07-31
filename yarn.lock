@@ -4471,6 +4471,11 @@ react-native-axios@^0.17.1:
   dependencies:
     follow-redirects "0.0.7"
 
+react-native-otp-textinput@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npmjs.org/react-native-otp-textinput/-/react-native-otp-textinput-1.1.6.tgz"
+  integrity sha512-auj4etyrp8N2GWyWTDO2If3uMdSoMR9oSJweQYfNEYP8cJEoEHLtDJhNOBJMwTrkRG8YbYroHg3b30TOhLv9kw==
+
 react-native-paper@^5.12.5:
   version "5.12.5"
   resolved "https://registry.npmjs.org/react-native-paper/-/react-native-paper-5.12.5.tgz"

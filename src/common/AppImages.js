@@ -7,6 +7,8 @@ export default AppImages = {
     waitImage: require('../assets/Images/wait.jpg'),
     shopDetail: require('../assets/Images/shopDetailScreen.jpg'),
     dropdownIcon: require('../assets/Images/dropdownIcon.png'),
+    otp: require('../assets/Images/otp.jpg'),
+
 
 
 }
