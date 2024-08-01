@@ -8,7 +8,6 @@ export default AppImages = {
     shopDetail: require('../assets/Images/shopDetailScreen.jpg'),
     dropdownIcon: require('../assets/Images/dropdownIcon.png'),
     otp: require('../assets/Images/otp.jpg'),
-
-
-
+    dashboardIcon: require('../assets/Images/dashboardIcon.png'),
+    // dashboardIcon: require('../assets/Images/dashboardIcon.png'),
 }

@@ -128,7 +128,7 @@ const ShopDetail2 = ({ navigation }) => {
               buttonText={'Submit'}
               onPress={() => {
                 console.log('buttonClicked')
-                navigation.navigate('ShopDetail1')
+                navigation.navigate('WaitingDashboard')
               }}
             />
           </View>
