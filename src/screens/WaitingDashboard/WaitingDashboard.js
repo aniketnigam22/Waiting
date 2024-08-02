@@ -5,6 +5,7 @@ import { responsiveFontSize, responsiveHeight, responsiveWidth } from '../../com
 import { Switch } from 'react-native-paper'
 import { socket } from '../Socket/Socket'
 import HeaderBackButton from '../../components/HeaderBackButton'
+import BottomNav from '../../components/BottomNav'
 
 const WaitingDashboard = () => {
     const [isSwitchOn, setIsSwitchOn] = useState(true);
@@ -75,6 +76,7 @@ const WaitingDashboard = () => {
             <View style={styles.container2}>
 
             </View>
+            <BottomNav home={true} />
         </SafeAreaView>
     )
 }

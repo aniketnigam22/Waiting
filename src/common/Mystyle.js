@@ -26,5 +26,10 @@ export const Mystyle = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
+    header_center: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+    },
 
 })

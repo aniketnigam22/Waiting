@@ -9,5 +9,7 @@ export default AppImages = {
     dropdownIcon: require('../assets/Images/dropdownIcon.png'),
     otp: require('../assets/Images/otp.jpg'),
     dashboardIcon: require('../assets/Images/dashboardIcon.png'),
-    // dashboardIcon: require('../assets/Images/dashboardIcon.png'),
+    searchIcon: require('../assets/Images/search.png'),
+    profileIcon: require('../assets/Images/profile.png'),
+    notificationIcon: require('../assets/Images/notification.png'),
 }
