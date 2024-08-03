@@ -9,14 +9,14 @@ import Colors from '../common/Colors'
 
 const BottomNav = (props) => {
     const navigation = useNavigation()
-    const reducer = useSelector(state => state.language) 
+    const reducer = useSelector(state => state.language)
     const selected_lang = 'English'
     return (
         <>
             <View style={styles.container}>
                 <View style={Mystyle.row}>
                     <View style={Mystyle.header}>
-                        <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('dashboard') }}>
+                        <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('WaitingDashboard') }}>
                             <View style={[Mystyle.header, { paddingTop: 5 }]}>
                                 <Image source={AppImages.dashboardIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.home ? Colors.blue : '' }} />
                             </View>
@@ -25,12 +25,12 @@ const BottomNav = (props) => {
                             </View>
                         </TouchableOpacity>
                     </View>
-        
+
                     <View style={Mystyle.header}>
                         <View style={Mystyle.header}>
-                            <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('company') }}>
+                            <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('ShopNotificaion') }}>
                                 <View style={[Mystyle.header, { paddingTop: 5 }]}>
-                                    <Image source={AppImages.notificationIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.company ? Colors.btn_color : Colors.placeholder_txt }} />
+                                    <Image source={AppImages.notificationIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.notification ? Colors.blue : Colors.placeholder_txt }} />
                                 </View>
                                 <View style={[Mystyle.header, { borderBottomWidth: props.company ? 3 : 0, borderColor: Colors.btn_color }]}>
                                     <Text style={styles.menu_txt}>{selected_lang.Company}</Text>
@@ -40,9 +40,9 @@ const BottomNav = (props) => {
                     </View>
                     <View style={Mystyle.header}>
                         <View style={Mystyle.header}>
-                            <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('profile') }}>
+                            <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('ShopOwnerProfile') }}>
                                 <View style={[Mystyle.header, { paddingTop: 5 }]}>
-                                    <Image source={AppImages.profileIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.profile ? Colors.btn_color : Colors.placeholder_txt }} />
+                                    <Image source={AppImages.profileIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.profile ? Colors.blue : '' }} />
                                 </View>
                                 <View style={[Mystyle.header, { borderBottomWidth: props.profile ? 3 : 0, borderColor: Colors.btn_color }]}>
                                     <Text style={styles.menu_txt}>{selected_lang.Profile}</Text>
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     container: {
         height: 56,
         backgroundColor: Colors.white,
-        borderWidth:0.2
+        borderWidth: 0.2
     },
     menu_txt: {
         fontSize: 11,

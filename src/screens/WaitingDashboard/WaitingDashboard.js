@@ -74,9 +74,11 @@ const WaitingDashboard = () => {
             </View>
 
             <View style={styles.container2}>
-
+                <View style={styles.nav}>
+                    <BottomNav home={true} />
+                </View>
             </View>
-            <BottomNav home={true} />
+
         </SafeAreaView>
     )
 }
@@ -163,5 +165,11 @@ const styles = StyleSheet.create({
         marginTop: 25,
         elevation: 1,
         backgroundColor: Colors.white
+    },
+    nav: {
+        position:'absolute',
+        bottom:0,
+        left:0,
+        right:0
     }
 })

@@ -24,7 +24,6 @@ const HeaderBackButton = (props) => {
                         </TouchableOpacity>
                         <Text style={{ fontSize: 20, color: Colors.black, fontWeight: '600' }}>{props.textValue}</Text>
                     </>
-
             }
         </View>
     )
