@@ -20,8 +20,8 @@ const BottomNav = (props) => {
                             <View style={[Mystyle.header, { paddingTop: 5 }]}>
                                 <Image source={AppImages.dashboardIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.home ? Colors.blue : '' }} />
                             </View>
-                            <View style={[Mystyle.header, { borderBottomWidth: props.home ? 3 : 0, borderColor: props.home ? Colors.btn_color : Colors.placeholder_txt }]}>
-                                <Text style={styles.menu_txt}>{selected_lang.Home}</Text>
+                            <View style={[Mystyle.header, { borderBottomWidth: props.home ? 3 : 0, borderColor: props.home ? Colors.blue : Colors.placeholder_txt }]}>
+                                <Text style={{ fontSize: 12, color: props.home ? Colors.blue : Colors.black }}>{'Dashboard'}</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
@@ -32,8 +32,8 @@ const BottomNav = (props) => {
                                 <View style={[Mystyle.header, { paddingTop: 5 }]}>
                                     <Image source={AppImages.notificationIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.notification ? Colors.blue : Colors.placeholder_txt }} />
                                 </View>
-                                <View style={[Mystyle.header, { borderBottomWidth: props.company ? 3 : 0, borderColor: Colors.btn_color }]}>
-                                    <Text style={styles.menu_txt}>{selected_lang.Company}</Text>
+                                <View style={[Mystyle.header, { borderBottomWidth: props.notification ? 3 : 0, borderColor: props.notification ? Colors.blue : Colors.placeholder_txt }]}>
+                                    <Text style={{ fontSize: 12, color: props.notification ? Colors.blue : Colors.black }}>{"Notifications"}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -44,8 +44,8 @@ const BottomNav = (props) => {
                                 <View style={[Mystyle.header, { paddingTop: 5 }]}>
                                     <Image source={AppImages.profileIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.profile ? Colors.blue : '' }} />
                                 </View>
-                                <View style={[Mystyle.header, { borderBottomWidth: props.profile ? 3 : 0, borderColor: Colors.btn_color }]}>
-                                    <Text style={styles.menu_txt}>{selected_lang.Profile}</Text>
+                                <View style={[Mystyle.header, { borderBottomWidth: props.profile ? 3 : 0, borderColor: props.profile ? Colors.blue : Colors.placeholder_txt }]}>
+                                    <Text style={{ fontSize: 12, color: props.profile ? Colors.blue : Colors.black }}>{"Profile"}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     container: {
         height: 56,
         backgroundColor: Colors.white,
-        borderWidth: 0.2
+        borderWidth: 2,
+        borderColor: Colors.white
     },
     menu_txt: {
         fontSize: 11,
