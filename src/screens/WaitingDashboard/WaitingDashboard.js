@@ -13,11 +13,6 @@ import ShortButton from '../../components/ShortButton'
 
 const WaitingDashboard = () => {
     const [isSwitchOn, setIsSwitchOn] = useState(true);
-    // socket.on("connection", (e) => {
-    //     socket.on('socketid', (e) => {
-    //         console.log(e);
-    //     })
-    // })
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
