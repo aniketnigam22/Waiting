@@ -1,47 +1,31 @@
 import { Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
 import React from 'react'
+import AppImages from '../common/AppImages'
 
 const ProfileBox = (props) => {
     return (
-        <>
-            <TouchableHighlight underlayColor={'none'} onPress={props.onPress}>
-                <View style={styles.box}>
-                    <View style={myStyle.row}>
-                        <View style={styles.center}>
-                            <Image
-                                style={{ height: 22, width: 22, tintColor: Colors.border }}
-                                source={props.source}
-                                resizeMode={'contain'}
-                            />
-                        </View>
-                        <View style={[myStyle.header, { justifyContent: 'center' }]}>
-                            <Text style={styles.heading}>{props.txt}</Text>
-                            {props.text ? (
-                                <Text style={styles.city}>{props.text}</Text>
-                            ) : (
-                                <></>
-                            )}
-                        </View>
-                        <View style={styles.center}>
-                            <TouchableHighlight
-                                style={props.check ? null : styles.arrow}
-                                onPress={props.onPress}
-                                underlayColor={'none'}>
-                                <Image
-                                    source={
-                                        props.check
-                                            ? props.check
-                                            : require('../../assets/image/arr.png')
-                                    }
-                                    resizeMode={'contain'}
-                                    style={props.check ? props.style : styles.img}
-                                />
-                            </TouchableHighlight>
-                        </View>
+        <TouchableHighlight underlayColor={null} onPress={props.onPress} style={{ marginHorizontal: 16 }}>
+            <View style={styles.box}>
+                <View style={styles.row}>
+                    <View style={styles.center}>
+                        <Image
+                            style={{ height: 22, width: 22, tintColor: Colors.border }}
+                            source={props.source}
+                            resizeMode={'contain'}
+                        />
+                    </View>
+                    <View style={[styles.header, { justifyContent: 'center' }]}>
+                        <Text style={styles.heading}>{props.txt}</Text>
+                        {props.text && (
+                            <Text style={styles.city}>{props.text}</Text>
+                        )}
+                    </View>
+                    <View style={styles.center}>
+                        <Image source={AppImages.notificationIcon} style={styles.img} />
                     </View>
                 </View>
-            </TouchableHighlight>
-        </>
+            </View>
+        </TouchableHighlight>
     )
 }
 
@@ -72,15 +56,19 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '600',
         color: '#4E4E5A',
-        fontFamily: Font.txt_medium,
+        // fontFamily: Font.txt_medium,
     },
     arrow: {
         height: 18,
         width: 18,
         borderWidth: 1.5,
         borderRadius: 18,
-        borderColor: Colors.btn_color,
+        // borderColor: Colors.btn_color,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    img: {
+        height: 20,
+        width: 15,
     },
 })
