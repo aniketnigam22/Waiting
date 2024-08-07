@@ -2,20 +2,12 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import HeaderBackButton from '../../components/HeaderBackButton'
 import BottomNav from '../../components/BottomNav'
-import ProfileBox from '../../components/ProfileBox'
-import AppImages from '../../common/AppImages'
 
-const ShopOwnerProfile = ({ navigation }) => {
+const ShopOwnerProfile = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <HeaderBackButton textValue={'Profile'} goBack={false} />
-      <ProfileBox
-        source={AppImages.backButton}
-        txt={'Settings'}
-        onPress={() => {
-          navigation.navigate('WaitingDashboard');
-        }}
-      />
+
 
       <View style={styles.nav}>
         <BottomNav profile={true} />
