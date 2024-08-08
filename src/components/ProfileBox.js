@@ -1,12 +1,13 @@
 import { Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
 import React from 'react'
+import { Mystyle } from '../common/Mystyle'
 
 const ProfileBox = (props) => {
     return (
         <>
             <TouchableHighlight underlayColor={'none'} onPress={props.onPress}>
                 <View style={styles.box}>
-                    <View style={myStyle.row}>
+                    <View style={Mystyle.row}>
                         <View style={styles.center}>
                             <Image
                                 style={{ height: 22, width: 22, tintColor: Colors.border }}
@@ -14,7 +15,7 @@ const ProfileBox = (props) => {
                                 resizeMode={'contain'}
                             />
                         </View>
-                        <View style={[myStyle.header, { justifyContent: 'center' }]}>
+                        <View style={[Mystyle.header, { justifyContent: 'center' }]}>
                             <Text style={styles.heading}>{props.txt}</Text>
                             {props.text ? (
                                 <Text style={styles.city}>{props.text}</Text>
@@ -27,7 +28,7 @@ const ProfileBox = (props) => {
                                 style={props.check ? null : styles.arrow}
                                 onPress={props.onPress}
                                 underlayColor={'none'}>
-                                <Image
+                                {/* <Image
                                     source={
                                         props.check
                                             ? props.check
@@ -35,7 +36,9 @@ const ProfileBox = (props) => {
                                     }
                                     resizeMode={'contain'}
                                     style={props.check ? props.style : styles.img}
-                                />
+                                /> */}
+
+                                <></>
                             </TouchableHighlight>
                         </View>
                     </View>
@@ -72,14 +75,14 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '600',
         color: '#4E4E5A',
-        fontFamily: Font.txt_medium,
+        // fontFamily: Font.txt_medium,
     },
     arrow: {
         height: 18,
         width: 18,
         borderWidth: 1.5,
         borderRadius: 18,
-        borderColor: Colors.btn_color,
+        // borderColor: Colors.btn_color,
         justifyContent: 'center',
         alignItems: 'center',
     },
