@@ -15,7 +15,9 @@ const UserBottomNav = (props) => {
   return (
     <>
       <View style={styles.container}>
+
         <View style={Mystyle.row}>
+
           <View style={Mystyle.header}>
             <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('Home') }}>
               <View style={[Mystyle.header, { paddingTop: 5 }]}>
@@ -31,7 +33,7 @@ const UserBottomNav = (props) => {
             <View style={Mystyle.header}>
               <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('Search') }}>
                 <View style={[Mystyle.header, { paddingTop: 5 }]}>
-                  <Image source={AppImages.searchIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.notification ? Colors.blue : Colors.placeholder_txt }} />
+                  <Image source={AppImages.searchIcon} resizeMode={'contain'} style={{ height: 24, width: 24, tintColor: props.search ? Colors.blue : Colors.placeholder_txt }} />
                 </View>
                 <View style={[Mystyle.header, { borderBottomWidth: props.search ? 3 : 0, borderColor: Colors.blue }]}>
                   <Text style={{ fontSize: 12, color: props.search ? Colors.blue : Colors.black }}>{'Search'}</Text>
@@ -39,6 +41,8 @@ const UserBottomNav = (props) => {
               </TouchableOpacity>
             </View>
           </View>
+
+
           <View style={Mystyle.header}>
             <View style={Mystyle.header}>
               <TouchableOpacity style={Mystyle.header_center} onPress={() => { navigation.navigate('UserProfile') }}>
@@ -51,7 +55,9 @@ const UserBottomNav = (props) => {
               </TouchableOpacity>
             </View>
           </View>
+
         </View>
+
       </View>
     </>
   )

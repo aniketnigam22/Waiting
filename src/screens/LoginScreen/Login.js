@@ -10,12 +10,19 @@ import { responsiveHeight, responsiveWidth } from '../../common/metrices'
 import Colors from '../../common/Colors'
 import LongButton from '../../components/LongButton'
 import HeaderBackButton from '../../components/HeaderBackButton'
+import { showDanger } from '../../common/CommonFunction'
 
 const Login = ({ navigation }) => {
 
     const [password, setPassword] = useState()
     const [email, setEmail] = useState()
     const [eyeValue, setEyeValue] = useState()
+
+    const handleLogin = () => {
+        if(password < 8) {
+            showDanger('')
+        }
+    }
 
     const toggleEye = () => {
         setEyeValue(prevValue => !prevValue);
