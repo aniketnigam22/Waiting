@@ -15,6 +15,9 @@ import WaitingDashboard from './src/screens/WaitingDashboard/WaitingDashboard';
 import ShopOwnerProfile from './src/screens/Profile/ShopOwnerProfile';
 import ShopNotificaion from './src/screens/ShopNotification/ShopNotificaion';
 import FlashMessage from 'react-native-flash-message';
+import Home from './src/screens/Home/Home';
+import Search from './src/screens/Search/Search';
+import UserProfile from './src/screens/Profile/UserProfile';
 
 const App = () => {
 
@@ -23,7 +26,7 @@ const App = () => {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
-          <Stack.Screen name="ChooseUserType" component={ChooseUserType} />
+          {/* <Stack.Screen name="ChooseUserType" component={ChooseUserType} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen name="Otp" component={Otp} />
@@ -33,6 +36,9 @@ const App = () => {
           <Stack.Screen name="WaitingDashboard" component={WaitingDashboard} />
           <Stack.Screen name="ShopOwnerProfile" component={ShopOwnerProfile} />
           <Stack.Screen name="ShopNotificaion" component={ShopNotificaion} />
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Search" component={Search} /> */}
+          <Stack.Screen name="UserProfile" component={UserProfile} />
         </Stack.Navigator>
       </NavigationContainer>
       <FlashMessage position="top" />

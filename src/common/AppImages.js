@@ -12,4 +12,5 @@ export default AppImages = {
     searchIcon: require('../assets/Images/search.png'),
     profileIcon: require('../assets/Images/profile.png'),
     notificationIcon: require('../assets/Images/notification.png'),
+    dummyProfile: require('../assets/Images/dummyProfile.png'),
 }
