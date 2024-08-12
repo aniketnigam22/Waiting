@@ -9,8 +9,6 @@ import Colors from '../common/Colors'
 
 const BottomNav = (props) => {
     const navigation = useNavigation()
-    const reducer = useSelector(state => state.language)
-    const selected_lang = 'English'
     return (
         <>
             <View style={styles.container}>

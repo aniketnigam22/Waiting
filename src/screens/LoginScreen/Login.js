@@ -19,10 +19,20 @@ const Login = ({ navigation }) => {
     const [eyeValue, setEyeValue] = useState()
 
     const handleLogin = () => {
-        if(password < 8) {
-            showDanger('')
+        if (password < 8) {
+            showDanger('Invalid', 'Password must be 8 characte long');
+            return;
         }
     }
+   
+    const handleSubmit = () => {
+        if (validateEmail(email)) {
+            // Perform your form submission or further logic here
+            console.log('Form Submitted:', email);
+        } else {
+            setEmailError('Please enter a valid email address');
+        }
+    };
 
     const toggleEye = () => {
         setEyeValue(prevValue => !prevValue);

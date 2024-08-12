@@ -28,7 +28,7 @@ const Otp = ({navigation}) => {
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ color: Colors.grey, fontSize: 12 }}>{'Otp has been sent to your email account.'}</Text>
+                    <Text style={{ color: Colors.grey, fontSize: 12 }}>{'Otp has been sent to your email account'}</Text>
                 </View>
 
                 <OTPTextView

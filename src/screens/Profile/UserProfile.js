@@ -82,10 +82,10 @@ const UserProfile = () => {
               <Dialog visible={visible} onDismiss={hideDialog}>
                 <Dialog.Title>Logout? </Dialog.Title>
                 <Dialog.Content>
-                  <Text variant="bodyMedium">Are you sure, You want to logout</Text>
+                  <Text variant="bodyMedium">{'Are you sure, You want to logout'}</Text>
                 </Dialog.Content>
                 <Dialog.Actions>
-                  <Button onPress={hideDialog}>Done</Button>
+                  <Button onPress={hideDialog}>{'Done'}</Button>
                 </Dialog.Actions>
               </Dialog>
             </Portal>
